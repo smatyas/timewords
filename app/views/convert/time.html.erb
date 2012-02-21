@@ -1,4 +1,18 @@
 <h1>Convert time to english words</h1>
-<p>
-  Here comes the form soon...
-</p>
+
+<%= form_tag({:action => :gettime}) do %>
+    <div class="field">
+      <%= label_tag(:q, 'Give the time:') %><br />
+      <%= text_field_tag(:q) %>
+    </div>
+    <div class="actions">
+      <%= submit_tag("Show me!") %>
+    </div>
+<% end %>
+
+<% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+<% end %>
+<% if flash[:error] %>
+    <p class="error"><%= flash[:error] %></p>
+<% end %>

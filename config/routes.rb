@@ -1,5 +1,6 @@
 Timewords::Application.routes.draw do
   get "convert/time"
+  post "convert/gettime"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
