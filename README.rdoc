@@ -1,0 +1,12 @@
+== TimeWords
+
+It's a simple ruby on rails project that converts the given time to english words.
+
+For example:
+    10:30    == It's half past ten in the morning
+    06:50    == It's ten to seven in the morning
+    21:45    == It's quarter to ten at night
+    16:11    == It's four past eleven in the afternoon
+
+---
+More on Ruby on Rails: http://rubyonrails.org
