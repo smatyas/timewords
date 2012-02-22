@@ -4,11 +4,11 @@ class ConvertController < ApplicationController
 
   def gettime
     begin
-      @time = DateTime.strptime(params[:time], "%H:%M").to_time
-      @time_string = TimeToWords.new(@time.strftime("%H"), @time.strftime("%M"))
+      @time_string = TimeToWords.new( params[:time] )
       flash[:notice] = @time_string.convert
+
     rescue Exception=>e
-      flash[:error] = e.message
+      flash[:error] = "Error: #{ e.message }."
     end
     redirect_to(:root)
   end
