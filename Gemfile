@@ -21,6 +21,17 @@ end
 
 gem 'jquery-rails'
 
+group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'cucumber-rails'
+#  gem 'database_cleaner'
+  gem 'capybara'
+#  gem 'webrat'
+  gem 'test-unit'
+  gem 'ruby-prof'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
