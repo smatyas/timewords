@@ -2,8 +2,8 @@
 
 <%= form_tag({:action => :gettime}) do %>
     <div class="field">
-      <%= label_tag(:q, 'Give the time:') %><br />
-      <%= text_field_tag(:q) %>
+      <%= label_tag("time", 'Give the time:') %><br />
+      <%= text_field_tag("time") %>
     </div>
     <div class="actions">
       <%= submit_tag("Show me!") %>
