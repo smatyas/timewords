@@ -5,10 +5,10 @@ class ConvertController < ApplicationController
   def gettime
     begin
       @time_string = TimeToWords.new( params[:time] )
-      flash[:notice] = @time_string.convert
+      flash[:notice] = "#{ params[:time] } = #{ @time_string.convert }"
 
     rescue Exception=>e
-      flash[:error] = "Error: #{ e.message }."
+      flash[:error] = "#{ params[:time] } = Error: #{ e.message }."
     end
     redirect_to(:root)
   end
